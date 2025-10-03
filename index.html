@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP Mini System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <h3>ERP System</h3>
+            </div>
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#" onclick="loadPage('dashboard')"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="#" onclick="loadPage('employees')"><i class="fas fa-users"></i> Employees</a>
+                </li>
+                <li>
+                    <a href="#" onclick="loadPage('customers')"><i class="fas fa-user-tie"></i> Customers</a>
+                </li>
+                <li>
+                    <a href="#" onclick="loadPage('inventory')"><i class="fas fa-boxes"></i> Inventory</a>
+                </li>
+                <li>
+                    <a href="#" onclick="loadPage('finance')"><i class="fas fa-file-invoice-dollar"></i> Finance</a>
+                </li>
+                <li>
+                    <a href="#" onclick="loadPage('tickets')"><i class="fas fa-ticket-alt"></i> Tickets</a>
+                </li>
+                <li>
+                    <a href="#" onclick="loadPage('reports')"><i class="fas fa-chart-bar"></i> Reports</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <!-- Top Navigation -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="ms-auto">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user-circle"></i> Admin User
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                <li><a class="dropdown-item" href="#" onclick="loadPage('profile')">Profile</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="loadPage('settings')">Settings</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#" onclick="logout()">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Main Content Area -->
+            <div id="main-content" class="container-fluid">
+                <!-- Content will be loaded here dynamically -->
+                <div id="login-container" style="display: none;">
+                    <!-- Login form will be loaded here -->
+                </div>
+                <div id="dashboard-container" style="display: none;">
+                    <!-- Dashboard content will be loaded here -->
+                </div>
+                <div id="employees-container" style="display: none;">
+                    <!-- Employees content will be loaded here -->
+                </div>
+                <div id="customers-container" style="display: none;">
+                    <!-- Customers content will be loaded here -->
+                </div>
+                <div id="inventory-container" style="display: none;">
+                    <!-- Inventory content will be loaded here -->
+                </div>
+                <div id="finance-container" style="display: none;">
+                    <!-- Finance content will be loaded here -->
+                </div>
+                <div id="tickets-container" style="display: none;">
+                    <!-- Tickets content will be loaded here -->
+                </div>
+                <div id="reports-container" style="display: none;">
+                    <!-- Reports content will be loaded here -->
+                </div>
+                <div id="profile-container" style="display: none;">
+                    <!-- Profile content will be loaded here -->
+                </div>
+                <div id="settings-container" style="display: none;">
+                    <!-- Settings content will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- jsPDF for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/employees.js"></script>
+    <script src="js/customers.js"></script>
+    <script src="js/inventory.js"></script>
+    <script src="js/finance.js"></script>
+    <script src="js/tickets.js"></script>
+    <script src="js/reports.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
